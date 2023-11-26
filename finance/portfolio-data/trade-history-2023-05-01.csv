@@ -1,0 +1,79 @@
+Date,Symbol,Trade Type,Quantity,Price
+3/31/2023,LL,Stock: Buy at Market Open,2500,$3.62
+3/31/2023,KORE,Stock: Buy at Market Open,7000,$1.19
+3/31/2023,GIII,Stock: Buy at Market Open,600,$15.54
+3/31/2023,BHR,Stock: Buy at Market Open,2300,$3.78
+3/30/2023,OPRT,Stock: Sell at Market Open,9000,$4.31
+3/23/2023,BHR,Stock: Buy at Market Open,2750,$3.86
+3/23/2023,LL,Stock: Buy at Market Open,2500,$3.47
+3/22/2023,CURO,Stock: Sell at Market Open,7500,$1.85
+3/16/2023,OPRT,Stock: Buy at Market Open,6000,$2.37
+3/16/2023,CURO,Stock: Buy at Market Open,7500,$1.56
+3/16/2023,KORE,Stock: Buy at Market Open,9000,$1.36
+3/16/2023,LL,Stock: Buy at Market Open,3000,$3.82
+3/16/2023,BHR,Stock: Buy at Market Open,2500,$4.18
+3/15/2023,DTC,Stock: Sell at Market Open,7500,$6.39
+2/27/2023,PIK,Stock: Buy at Market Open,12000,$0.81
+2/27/2023,OPRT,Stock: Buy at Market Open,1500,$6.07
+2/27/2023,DTC,Stock: Buy at Market Open,2500,$4.15
+2/27/2023,DAVE,Stock: Buy at Market Open,1250,$8.45
+02/08/2023,EHTH,Stock: Sell at Market Open,1500,$8.62
+02/08/2023,TGI,Stock: Sell at Market Open,2700,$12.56
+02/07/2023,PIK,Stock: Buy at Market Open,11500,$1.00
+02/07/2023,DAVE,Stock: Buy at Market Open,1050,$9.85
+02/07/2023,OPRT,Stock: Buy at Market Open,1500,$7.35
+02/07/2023,TSAT,Stock: Buy at Market Open,1300,$9.68
+02/07/2023,EHTH,Stock: Buy at Market Open,1500,$7.73
+02/03/2023,KODK,Stock: Sell at Market Open,5000,$3.92
+02/03/2023,AAPL,Stock: Sell at Market Open,50,$148.03
+1/26/2023,KODK,Stock: Buy at Market Open,5000,$3.45
+1/26/2023,GIII,Stock: Buy at Market Open,800,$16.06
+1/26/2023,AHT,Stock: Sell at Market Open,6000,$6.36
+1/13/2023,KODK,Stock: Sell at Market Open,3200,$3.54
+1/13/2023,HYFM,Stock: Sell at Market Open,10000,$1.47
+01/06/2023,AHT,Stock: Buy at Market,3000,$4.35
+01/06/2023,TGI,Stock: Buy at Market,1000,$9.77
+01/06/2023,KODK,Stock: Buy at Market,3200,$3.27
+01/06/2023,HYFM,Stock: Buy at Market,10000,$1.27
+01/06/2023,NR,Stock: Sell at Market Open,7500,$4.50
+01/05/2023,LDI,Stock: Sell at Market Open,10000,$1.81
+11/30/2022,MSFT,Stock: Sell at Market,10,$244.62
+11/23/2022,NR,Stock: Buy at Market Open,7500,$3.98
+11/23/2022,IAG,Stock: Sell at Market Open,10000,$1.97
+11/15/2022,F,Stock: Buy at Market,1000,$14.42
+11/15/2022,DTC,Stock: Buy at Market,5000,$4.99
+11/15/2022,TGI,Stock: Buy at Market,1000,$11.93
+11/15/2022,AHT,Stock: Buy at Market,2000,$7.07
+11/14/2022,TGI,Stock: Buy at Market Open,700,$12.19
+11/14/2022,OPEN,Stock: Sell at Market Open,16000,$2.12
+11/14/2022,DTC,Stock: Sell at Market Open,7500,$4.90
+11/11/2022,LDI,Stock: Buy at Market,10000,$1.58
+11/11/2022,IAG,Stock: Buy at Market,10000,$1.82
+11/11/2022,REAL,Stock: Sell at Market Open,20000,$1.43
+11/11/2022,HYFM,Stock: Sell at Market Open,5000,$2.48
+11/10/2022,AHT,Stock: Buy at Market Open,1000,$6.61
+11/10/2022,DTC,Stock: Buy at Market Open,2500,$4.30
+11/09/2022,REAL,Stock: Buy at Market,10000,$1.17
+11/09/2022,OPEN,Stock: Buy at Market,10000,$1.57
+11/09/2022,GRWG,Stock: Sell at Market,7500,$4.85
+11/08/2022,REAL,Stock: Buy at Market Open,10000,$1.42
+11/08/2022,HYFM,Stock: Buy at Market Open,5000,$2.20
+11/08/2022,DTC,Stock: Buy at Market Open,5000,$4.28
+11/08/2022,OPEN,Stock: Buy at Market Open,1000,$1.79
+11/02/2022,RYAM,Stock: Sell at Market Open,1000,$4.90
+10/27/2022,RYAM,Stock: Buy at Market Open,1000,$4.11
+10/27/2022,ROOT,Stock: Sell at Market Open,3000,$7.56
+10/27/2022,HYFM,Stock: Sell at Market Open,5000,$2.58
+10/24/2022,GRWG,Stock: Buy at Market Open,2500,$3.22
+10/24/2022,ROOT,Stock: Buy at Market Open,3000,$6.80
+10/24/2022,HYFM,Stock: Buy at Market Open,5000,$2.30
+10/24/2022,OPEN,Stock: Buy at Market Open,5000,$2.50
+10/24/2022,RYAM,Stock: Sell at Market Open,5000,$3.74
+10/24/2022,REAL,Stock: Sell at Market Open,5000,$1.42
+10/13/2022,REAL,Stock: Buy at Market Open,5000,$1.20
+10/13/2022,TSLA,Stock: Buy at Market Open,10,$208.30
+10/13/2022,MSFT,Stock: Buy at Market Open,10,$219.85
+10/13/2022,AMZN,Stock: Buy at Market Open,10,$107.88
+10/13/2022,AAPL,Stock: Buy at Market Open,50,$134.99
+10/13/2022,RYAM,Stock: Buy at Market Open,5000,$2.90
+10/13/2022,GRWG,Stock: Buy at Market Open,5000,$3.30
