@@ -1,11 +1,22 @@
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
+  font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     color: #333;
     margin: 0;
     padding: 0;
   }
+  
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Use 700 for bold */
+  }
+  
+  p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Use 400 for regular weight */
+  }
+  
   
   img {
     max-width: 100%;
@@ -227,4 +238,46 @@ div.cta-container a.cta-button:hover {
   background-color: #003d82; /* Darker blue on hover for visual feedback */
 }
 
+/* Finance Page */
+/* Investopedia Portfolio Image */
+.investopedia-portfolio {
+  justify-content: center;
+}
 
+/* Equity Reports Section Styles */
+#equity-reports-section li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribute space between items */
+  margin-bottom: 1rem; /* Add space between each report */
+}
+
+#equity-reports-section img {
+  flex-shrink: 0; /* Prevent the image from shrinking */
+  margin-right: 15px; /* Space between image and text */
+  width: 250px; /* Adjust as needed */
+  height: auto;
+  max-width: none;
+}
+
+#equity-reports-section h3 {
+  margin-top: 0;
+  margin-right: 15px; /* Space between text and button */
+  flex-grow: 1; /* Allow the text to take up remaining space */
+}
+
+#equity-reports-section .cta-container {
+  text-align: center;
+  margin-top: 0;
+  flex-shrink: 0; /* Prevent the button container from shrinking */
+}
+
+/* Programming Projects Page */
+.project-skills {
+  background-color: rgb(200, 241, 255);
+}
+
+#banner img{
+  height: 200px;
+  width:100%;
+}
