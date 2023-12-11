@@ -1,14 +1,50 @@
-.workout {
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e8f0fe; /* Light blue background */
+    color: #333;
     text-align: center;
-    margin-top: 20px;
+    padding: 20px;
 }
 
-#drill-name {
-    font-size: 36px;
+.button-container fieldset {
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #b6d4fe;
+    background-color: white;
+}
+
+input[type="number"], button {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px solid #b6d4fe;
+    font-size: 16px;
+}
+
+button {
+    background-color: #76b2fe; /* Soft blue for buttons */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #5a9ef4; /* Slightly darker blue on hover */
+}
+
+.workout {
+    margin-top: 30px;
+}
+
+#drill-name, #current-drill {
+    font-size: 26px;
+    color: #4a4a4a; /* Soft dark color for text */
     margin-bottom: 15px;
 }
 
 #countdown {
-    font-size: 48px;
+    font-size: 60px;
     font-weight: bold;
+    color: #2e86de; /* Stronger blue for emphasis */
 }
