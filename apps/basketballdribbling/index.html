@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css"></link>
+</head>
+<body>
+    <div class="button-container">
+        <fieldset>
+            <legend>Select a workout:</legend>
+          
+            <div>
+              <input type="radio" id="random" name="workoutType" value="random" checked />
+              <label for="random">Random</label>
+            </div>
+          
+            <div>
+              <input type="radio" id="pyramid" name="workoutType" value="pyramid" />
+              <label for="pyramid">Pyramid</label>
+            </div>
+
+            <label for="bpm">What BPM is comfortable?</label>
+            <input type="number" id="bpm" name="bpm" value="100"><br><br>
+            <label for="duration">How long would you like to go for (minutes)?</label>
+            <input type="number" id="duration" name="duration" value="5"><br><br>
+        
+            <button id="start">Start Workout</button>
+            <button id="reset" style="margin-left: 10px;">Reset Workout</button>
+        </fieldset>
+    </div>
+
+    <div class="workout">
+        <h1 id="drill-name"></h1>
+        <div id="current-drill" style="font-size: 24px; margin-top: 10px;"></div>
+        <div id="countdown" style="font-size: 48px;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

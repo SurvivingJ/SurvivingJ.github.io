@@ -1,0 +1,14 @@
+.workout {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#drill-name {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+#countdown {
+    font-size: 48px;
+    font-weight: bold;
+}
