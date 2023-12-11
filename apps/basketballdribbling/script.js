@@ -45,12 +45,27 @@ function startWorkout() {
 }
 
 function runRandomWorkout(duration) {
-    let drillDisplay = document.getElementById('current-drill');
-    drillInterval = setInterval(() => {
+    const drillDisplay = document.getElementById('current-drill');
+    const totalDrillTime = duration * 60 * 1000; // Convert minutes to milliseconds
+    let remainingTime = totalDrillTime;
+
+    function executeRandomDrill() {
+        if (remainingTime <= 0) {
+            clearInterval(workoutInterval);
+            drillDisplay.textContent = '';
+            return;
+        }
+
         const randomDrill = drills[Math.floor(Math.random() * drills.length)];
         drillDisplay.textContent = `Current Drill: ${randomDrill}`;
-    }, 10000); // Change drill every 10 seconds
+        remainingTime -= 10000; // Deduct time for each drill
+
+        setTimeout(executeRandomDrill, 10000); // Change drill every 10 seconds
+    }
+
+    executeRandomDrill();
 }
+
 
 function runPyramidWorkout(duration) {
     const drillDisplay = document.getElementById('current-drill');
