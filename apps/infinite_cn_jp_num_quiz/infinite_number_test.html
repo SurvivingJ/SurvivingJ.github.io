@@ -1,0 +1,51 @@
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div id="quiz-container">
+        <div id="top-bar">
+            <button id="settings">Settings</button>
+            <div id="correct">
+                <p>Current Streak: </p><p id="curr-streak">0</p>
+                <p>Best Streak: </p><p id="best-streak">0</p>
+            </div>
+        </div>
+        
+
+        <div id="qn-disp">
+            <p id="qn"></p>
+            <p id="msg"></p>
+        </div>
+        <div id="ans-input">
+            <input id="ans-input txtbox"/>
+        </div>
+        <div id="notes">
+            <p><b>Here are some guidelines for inputting the words:</b></p>
+            <p> - Numbers such as "84" and "23" should be written as "eighty-four" and "twenty-three", respectively. Ensure that you include a hyphen between the words.</p>
+            <p> - Remember to use "and" between the hundreds and tens digits. For example, "645" should be expressed as "six hundred and forty-five", not "six hundred forty-five".</p>
+            <p> - Note that the American spelling convention for numbers is followed, as dictated by the numbers2words library utilized.</p>
+            <hr>
+            <p><b>Notes on the tool:</b></p>
+            <p> - Default value is always set to 10,000</p>
+            <p> - This tool can be used both for practicing Chinese and Japanese </p>
+            <hr>
+            <p> <b>Project name:</b> Infinite Chinese Number Practice Question Generator</p>
+            <p> <b>"numbers2words" JS Library Credit:</b> <a>https://github.com/Kibo/numbers2words/tree/master</a></p>
+        </div>
+    </div>
+    <div id="settings-container" style="display: none;">
+        <input type="radio" name="langdirection" value="CE" id="ce">
+        <label for="ce">Chinese to English</label>
+        <input type="radio" name="langdirection" value="EC" id="ec">
+        <label for="ec">English to Chinese</label>
+        <br>
+        <label for="upper-bound-input">Upper bound:</label>
+        <input type="number" id="upper-bound-input" min="1" step="1">
+        <button id="save-button">Save</button>
+    </div>
+    <!-- numbers2words -> https://github.com/Kibo/numbers2words/tree/master --> 
+    <!-- Used for converting integers to english words -->
+    <script src="numbers2words.js"></script>
+    <script src="infinite_quiz_func.js"></script>
+</body>
