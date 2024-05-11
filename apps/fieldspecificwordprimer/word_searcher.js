@@ -2,7 +2,7 @@
 let i = 0;
 
 // Fetch CSV data
-fetch('/unigram_freq.csv')
+fetch('https://raw.githubusercontent.com/SurvivingJ/SurvivingJ.github.io/main/apps/fieldspecificwordprimer/unigram_freq.csv')
     .then(response => response.text())
     .then(data => {
         const csvData = data.split('\n');
