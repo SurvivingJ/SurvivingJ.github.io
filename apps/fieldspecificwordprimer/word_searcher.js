@@ -1,4 +1,4 @@
-// Assuming eng_freq is already initialized
+let eng_freq = [];
 let i = 0;
 
 // Fetch CSV data
