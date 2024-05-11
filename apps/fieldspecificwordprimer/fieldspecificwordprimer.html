@@ -1,0 +1,27 @@
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div id="container">    
+        <div id="disp">
+            <p>Please input the topic you would like to find words for and the number of words you would like to learn.</p>
+        </div>
+        <div id="ans-input">
+            <input id="ans-input txtbox"/>
+            <input type="number" id="upper-bound-input" min="1" step="1">
+            <button id="submit-button">Submit</button>
+        </div>
+        <div id="notes">
+            <p><b>Here are some guidelines for the program:</b></p>
+            <p> - Words are taken from Wikipedia articles, so ensure your topic has a Wikipedia page</p>
+            <p> - The program only searches English Wikipedia, unfortunately I have not added compatibility for other languages</p>
+            <hr>
+            <p><b>Notes on the tool:</b></p>
+            <p> - Default value is always set to 50</p>
+            <hr>
+            <p> <b>Project name:</b> Field Specific Word Primer</p>
+        </div>
+    </div>
+    <script src="word_searcher.js"></script>
+</body>
