@@ -1,1 +1,83 @@
+:root {
+            --bg: #000;
+            --text: #fafafa;
+            --accent: #3b82f6;
+            --gap: 1rem;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .search-bar {
+            position: sticky;
+            top: 0;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 1rem 0;
+            backdrop-filter: blur(10px);
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #333;
+            border-radius: 0.5rem;
+            background: #111;
+            color: inherit;
+            font-size: 1rem;
+        }
+
+        .prompt-category {
+            margin: 2rem 0;
+            border: 1px solid #333;
+            border-radius: 0.5rem;
+        }
+
+        .category-header {
+            padding: 1rem;
+            background: #111;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .prompt-list {
+            padding: 1rem;
+            display: grid;
+            gap: var(--gap);
+            border-top: 1px solid #333;
+        }
+
+        .prompt-item {
+            padding: 0.75rem;
+            background: #1a1a1a;
+            border-radius: 0.25rem;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .chevron {
+            transition: transform 0.3s ease;
+        }
+
+        .rotate {
+            transform: rotate(180deg);
+        }
