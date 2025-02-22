@@ -1,34 +1,25 @@
 // Step 1: Initialize an empty array for the prompts
 let prompts = [];
 
-// Step 2: Fetch the index of prompt files
-fetch('prompts/index.json')
+// Step 2: Fetch the prompts from the single JSON file
+fetch('prompts.json')
   .then(response => response.json())
-  .then(files => {
-    // Step 3: Load each file from the index and push its contents to the prompts array
-    let filesLoaded = 0;
-    files.forEach(file => {
-      fetch(`prompts/${file}`)
-        .then(response => response.json()) // Assuming each file is a valid JSON
-        .then(data => {
-          prompts.push(...data); // Spread the array of data into the prompts array
-          
-          // Once all files are loaded, proceed with dynamic content insertion
-          filesLoaded++;
-          if (filesLoaded === files.length) {
-            renderPrompts(); // Call the function to render the prompts after all are loaded
-          }
-        })
-        .catch(error => console.error('Error loading prompt file:', error));
-    });
+  .then(data => {
+    prompts = data;
+    renderPrompts();
   })
-  .catch(error => console.error('Error fetching index.json:', error));
+  .catch(error => console.error('Error loading prompts:', error));
 
-// Step 4: Function to render the prompts once all files are loaded
+// Step 3: Function to render the prompts
 function renderPrompts() {
     const container = document.querySelector('.container');
-    const categories = [...new Set(prompts.map(p => p.category))];
-
+    
+    // Clear existing content
+    container.innerHTML = '';
+    
+    // Get unique categories and sort them
+    const categories = [...new Set(prompts.map(p => p.category))].sort();
+    
     categories.forEach(category => {
         const categoryHtml = `
             <div class="prompt-category">
@@ -39,16 +30,38 @@ function renderPrompts() {
                     </svg>
                 </div>
                 <div class="prompt-list">
-                    ${prompts.filter(p => p.category === category).map(p => `
-                        <div class="prompt-item" data-search="${p.title.toLowerCase()} ${p.content.toLowerCase()}">
-                            <h3>${p.title}</h3>
-                            <p>${p.content}</p>
-                        </div>
-                    `).join('')}
+                    ${prompts
+                        .filter(p => p.category === category)
+                        .sort((a, b) => a.title.localeCompare(b.title))
+                        .map(p => `
+                            <div class="prompt-item" data-search="${p.title.toLowerCase()} ${p.content.toLowerCase()}">
+                                <h3>${p.title}</h3>
+                                <p>${p.content}</p>
+                                <button class="copy-button" data-content="${encodeURIComponent(p.content)}">
+                                    Copy
+                                </button>
+                            </div>
+                        `).join('')}
                 </div>
             </div>
         `;
         container.insertAdjacentHTML('beforeend', categoryHtml);
+    });
+
+    // Add copy functionality
+    document.querySelectorAll('.copy-button').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const content = decodeURIComponent(button.dataset.content);
+            navigator.clipboard.writeText(content)
+                .then(() => {
+                    // Visual feedback
+                    button.textContent = 'Copied!';
+                    setTimeout(() => {
+                        button.textContent = 'Copy';
+                    }, 2000);
+                })
+                .catch(err => console.error('Failed to copy:', err));
+        });
     });
 
     // Interactive features (collapsing categories)
@@ -57,7 +70,7 @@ function renderPrompts() {
             const list = header.nextElementSibling;
             const chevron = header.querySelector('.chevron');
             list.style.display = list.style.display === 'none' ? 'grid' : 'none';
-            chevron.classList.toggle('rotate');
+            chevron.style.transform = list.style.display === 'none' ? 'rotate(0deg)' : 'rotate(180deg)';
         });
     });
 
@@ -68,12 +81,14 @@ function renderPrompts() {
         
         document.querySelectorAll('.prompt-item').forEach(item => {
             const match = item.dataset.search.includes(searchTerm);
-            item.classList.toggle('hidden', !match);
+            item.style.display = match ? 'block' : 'none';
         });
 
+        // Show/hide categories based on whether they have visible items
         document.querySelectorAll('.prompt-category').forEach(category => {
-            const hasVisible = category.querySelector('.prompt-item:not(.hidden)');
-            category.style.display = hasVisible ? 'block' : 'none';
+            const hasVisibleItems = [...category.querySelectorAll('.prompt-item')]
+                .some(item => item.style.display !== 'none');
+            category.style.display = hasVisibleItems ? 'block' : 'none';
         });
     });
 }
